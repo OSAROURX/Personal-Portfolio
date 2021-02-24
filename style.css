@@ -91,6 +91,7 @@ nav img {
   height: 4px;
   width: 30px;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 /* Welcome Section---------------------------------------------------------------------------------------------------------------*/
 .coding {
@@ -456,7 +457,15 @@ footer {
   .burgerClicked {
     transform: translateX(0%);
   }
-
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 8px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -8px);
+  }
   .welcome {
     font-size: 20px;
     top: 18%;

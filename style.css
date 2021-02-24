@@ -85,6 +85,7 @@ nav img {
 }
 .burger {
   display: none;
+  cursor: pointer;
 }
 .burger div {
   background-color: #3291e4;

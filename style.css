@@ -79,6 +79,19 @@ nav {
 .navlinks a:hover {
   color: #3291e4;
 }
+
+nav img {
+  display: none;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  background-color: #3291e4;
+  height: 4px;
+  width: 30px;
+  margin: 5px;
+}
 /* Welcome Section---------------------------------------------------------------------------------------------------------------*/
 .coding {
   z-index: -1;
@@ -373,6 +386,16 @@ footer {
     filter: hue-rotate(360deg);
   }
 }
+@keyframes navLinkSlide {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* ScrollBar---------------------------------------------------------------------------------------------------------------------*/
 ::-webkit-scrollbar {
   width: 7px;
@@ -395,6 +418,45 @@ footer {
   .coding {
     display: none;
   }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  nav img,
+  .burger {
+    display: block;
+  }
+  .navlinks {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    height: 91vh;
+    top: 9vh;
+    background: #3291e4fb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in;
+  }
+  .navlinks li {
+    opacity: 0;
+  }
+  .navlinks a {
+    color: #eeeeee;
+  }
+  .navlinks a:hover {
+    color: #dfdfdf;
+  }
+  .navlinks a::after {
+    display: none;
+  }
+  .burgerClicked {
+    transform: translateX(0%);
+  }
+
   .welcome {
     font-size: 20px;
     top: 18%;
@@ -460,8 +522,8 @@ footer {
   .more {
     top: 10%;
   }
-  #conatct {
-    height: 1500px;
+  #contact {
+    height: 700px;
   }
   .backToTopBtn {
     top: 200%;

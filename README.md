@@ -1,1 +1,1 @@
-# [Personal-Portfolio](https://leviathansr.github.io/Personal-Portfolio/)
+# [Personal-Portfolio](https://my-personal-portfolio-sr.netlify.app/)

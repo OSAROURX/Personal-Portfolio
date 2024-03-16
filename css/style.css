@@ -196,7 +196,26 @@ textarea:not([rows]) {
   --secondary-color: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--primary-color);
   font-family: var(--ff-text);
+}
+
+section {
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+}
+
+/*************************/
+/* Media Queries */
+/*************************/
+
+@media only screen and (min-width: 1025px) {
 }

@@ -147,7 +147,7 @@ body {
 li {
   display: inline-block;
   list-style: none;
-  width: clamp(6rem, 10dvw + 1rem, 12rem);
+  width: clamp(10rem, 10dvw + 1rem, 15rem);
 }
 
 .nav-link {

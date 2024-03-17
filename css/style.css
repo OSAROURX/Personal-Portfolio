@@ -263,7 +263,7 @@ li {
   cursor: pointer;
   color: currentColor;
   background-color: var(--background-color);
-  border: 1px solid var(--primary-color);
+  border: 1px solid #1b1f2326;
   border-radius: 5px;
   transition: all 0.15s ease-in-out;
 }

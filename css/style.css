@@ -203,7 +203,7 @@ li {
 }
 
 .projects .title {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .projects-container {
@@ -250,6 +250,39 @@ li {
 
 .project-tile a:hover ion-icon {
   color: currentColor;
+}
+
+.button {
+  width: 10rem;
+  max-width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 5rem;
+  cursor: pointer;
+  color: currentColor;
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+}
+
+.see-more-btn {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+  padding-block: 0.75em;
+}
+
+.button:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.button ion-icon {
+  font-size: var(--step-0);
+  transform: translateX(0.5rem);
 }
 
 /*************************/

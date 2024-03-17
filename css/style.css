@@ -115,17 +115,26 @@ html {
   --primary-color: #222222;
   --secondary-color: #ffffff;
   --background-color: #f5f5f5;
+
+  /* Paddings & Margins */
+  --section-padding-block: 8rem;
 }
 
 /*************************/
-/* General Styling */
+/* General Styling/Re-usable classes */
 /*************************/
 
 body {
   color: var(--primary-color);
   font-family: var(--ff-text);
+  font-size: var(--step--1);
 }
 
+.title {
+  font-family: var(--ff-sub-heading);
+  font-size: var(--step-3);
+  text-align: center;
+}
 /*************************/
 /* Navbar */
 /*************************/
@@ -134,6 +143,7 @@ body {
   position: fixed;
   width: 100%;
   font-size: var(--step-0);
+  background-color: var(--secondary-color);
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -156,26 +166,27 @@ li {
   align-items: center;
   padding-block: 1.25rem;
   text-decoration: none;
-  color: var(--primary-color);
+  color: currentColor;
   border: 5px solid transparent;
   transition: border 150ms ease-in-out;
 }
 
 .nav-link:hover {
-  border-bottom: 5px solid var(--primary-color);
+  border-bottom: 5px solid currentColor;
 }
 
 /*************************/
 /* Welcome Section */
 /*************************/
+.welcome-section {
+  background-color: var(--background-color);
+}
 
 .hero {
   display: grid;
   place-content: center;
   gap: 1rem;
-  text-align: center;
   height: 100dvh;
-  background-color: var(--background-color);
 }
 
 .hero-heading {
@@ -183,14 +194,72 @@ li {
   font-size: var(--step-5);
 }
 
-.hero-sub-heading {
-  font-family: var(--ff-sub-heading);
-  font-size: var(--step-3);
-}
-
 /*************************/
 /* Projects Section */
 /*************************/
+
+.projects {
+  padding-block: var(--section-padding-block);
+}
+
+.projects .title {
+  margin-bottom: 4rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+  gap: 2rem;
+  max-width: 69rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.project-tile {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: hsla(0, 0%, 0%, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.149) 0px 0px 0px 1px;
+}
+
+.project-tile img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.project-tile a {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: currentColor;
+  background-color: var(--background-color);
+  border-top: 1px solid #1b1f2326;
+  padding: 0.5em 1em;
+}
+
+.project-tile a:hover {
+  text-decoration: underline;
+}
+
+.project-tile a ion-icon {
+  color: transparent;
+  transition: color 0.15s ease-in-out;
+}
+
+.project-tile a:hover ion-icon {
+  color: currentColor;
+}
+
+/*************************/
+/* Contact Section */
+/*************************/
+
+.contact {
+  padding-block: var(--section-padding-block);
+  background-color: var(--background-color);
+}
 
 /*************************/
 /* Media Queries */

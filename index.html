@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header>
       <nav class="navbar" id="navbar">
         <ul class="nav-links">
           <li><a class="nav-link" href="#welcome-section">About</a></li>
@@ -28,33 +28,73 @@
       </nav>
     </header>
     <main>
-      <section id="welcome-section">
+      <section id="welcome-section" class="welcome-section">
         <div class="hero">
-          <h1 class="hero-heading">Hey I'm OMAR</h1>
-          <h2 class="hero-sub-heading">a web developer</h2>
+          <h1 class="hero-heading">Hi I'm OMAR</h1>
+          <h2 class="sub-heading title">a web developer</h2>
         </div>
       </section>
-      <section id="projects">
-        <div class="container">
+      <section id="projects" class="projects">
+        <h2 class="title">My Projects</h2>
+        <div class="projects-container">
           <div class="project-tile">
+            <img src="images/survey-form.webp" alt="survey form" />
+            <a href="https://onesrx.github.io/fcc-survey-form/" target="_blank"
+              >Survey Form<ion-icon name="open-outline"></ion-icon
+            ></a>
+          </div>
+          <div class="project-tile">
+            <img src="images/tribute-page.webp" alt="tribute page" />
+            <a href="https://onesrx.github.io/fcc-tribute-page/" target="_blank"
+              >Tribute Page<ion-icon name="open-outline"></ion-icon
+            ></a>
+          </div>
+          <div class="project-tile">
+            <img
+              src="images/technical-documentation-page.webp"
+              alt="technical documentation page"
+            />
+            <a
+              href="https://onesrx.github.io/fcc-technical-doc-page/"
+              target="_blank"
+              >Technical Doc Page<ion-icon name="open-outline"></ion-icon
+            ></a>
+          </div>
+          <div class="project-tile">
+            <img
+              src="images/product-landing-page.webp"
+              alt="product landing page"
+            />
             <a
               href="https://onesrx.github.io/fcc-product-landing-page/"
               target="_blank"
-            ></a>
+              >Product Landing Page
+              <ion-icon name="open-outline"></ion-icon>
+            </a>
           </div>
-          <div class="project-tile">2</div>
-          <div class="project-tile">3</div>
-          <div class="project-tile">4</div>
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" class="contact">
         <div>
-          <h2>Contact Me</h2>
-          <a id="profile-link" href="https://github.com" target="_blank"></a>
+          <h2 class="title">Contact Me</h2>
+          <a id="profile-link" href="https://github.com" target="_blank"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a href="mailto:9kb2jyi3@anonaddy.com"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
         </div>
       </section>
     </main>
     <footer></footer>
     <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

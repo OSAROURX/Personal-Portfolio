@@ -115,6 +115,7 @@ html {
   --primary-color: #222222;
   --secondary-color: #ffffff;
   --background-color: #f5f5f5;
+  --primary-shade: #dddddd;
 
   /* Paddings & Margins */
   --section-padding-block: 8rem;
@@ -143,7 +144,7 @@ body {
   position: fixed;
   width: 100%;
   font-size: var(--step-0);
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -209,13 +210,15 @@ li {
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
-  gap: 2rem;
+  gap: 1rem;
   max-width: 69rem;
   margin-inline: auto;
   padding-inline: 1rem;
 }
 
 .project-tile {
+  text-decoration: none;
+  color: currentColor;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: hsla(0, 0%, 0%, 0.02) 0px 1px 3px 0px,
@@ -228,27 +231,25 @@ li {
   object-fit: cover;
 }
 
-.project-tile a {
+.project-tile p {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  text-decoration: none;
-  color: currentColor;
   background-color: var(--background-color);
   border-top: 1px solid #1b1f2326;
   padding: 0.5em 1em;
 }
 
-.project-tile a:hover {
+.project-tile:hover > p {
   text-decoration: underline;
 }
 
-.project-tile a ion-icon {
+.project-tile ion-icon {
   color: transparent;
   transition: color 0.15s ease-in-out;
 }
 
-.project-tile a:hover ion-icon {
+.project-tile:hover ion-icon {
   color: currentColor;
 }
 
@@ -258,6 +259,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.25rem;
   margin-inline: auto;
   margin-top: 5rem;
   cursor: pointer;
@@ -265,10 +267,10 @@ li {
   background-color: var(--background-color);
   border: 1px solid #1b1f2326;
   border-radius: 5px;
-  transition: all 0.15s ease-in-out;
+  transition: 0.15s ease-out;
 }
 
-.see-more-btn {
+.see-more-link {
   display: block;
   text-decoration: none;
   color: currentColor;
@@ -276,15 +278,16 @@ li {
 }
 
 .button:hover {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
+  background-color: var(--primary-shade);
 }
 
 .button ion-icon {
-  font-size: var(--step-0);
-  transform: translateX(0.5rem);
+  transition: 0.15s ease-out;
 }
 
+.button:hover ion-icon {
+  transform: translateX(0.3rem);
+}
 /*************************/
 /* Contact Section */
 /*************************/
@@ -294,6 +297,10 @@ li {
   background-color: var(--background-color);
 }
 
+.contact-text {
+  text-align: center;
+  font-size: var(--step-0);
+}
 /*************************/
 /* Media Queries */
 /*************************/

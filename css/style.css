@@ -283,11 +283,12 @@ li {
 }
 
 .button ion-icon {
+  font-size: var(--step-0);
   transition: transform 0.15s ease-in-out;
 }
 
 .button:hover ion-icon {
-  transform: translateX(0.3rem);
+  transform: translateX(0.15rem);
 }
 
 /*************************/

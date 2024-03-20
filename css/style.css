@@ -333,7 +333,6 @@ li {
 
 .contact-info a:hover {
   text-decoration: underline;
-  text-shadow: 1px #222222;
 }
 
 .contact-info a ion-icon {
